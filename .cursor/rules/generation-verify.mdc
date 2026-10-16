@@ -1,0 +1,15 @@
+---
+description: Generation, article-plan, and claim verification boundaries
+globs: scripts/generate.py,scripts/paragraph_*.py,scripts/article_plan*.py,scripts/source_hydration.py,scripts/narrative_reconstruction.py,scripts/validate_article_plan_gate.py,tests/test_article_plan*.py,tests/test_source_hydration.py,writing_rag/generate/**,writing_rag/plan/**,writing_rag/verify/**
+alwaysApply: false
+---
+
+# Generation and verification contract
+
+- Article-plan is opt-in shadow path; it does not replace Qwen retrieval.
+- `source_backed` claims must stay inside their source allowlist.
+- `author_asserted` claims require assertion IDs supplied outside the model.
+- Causal claims require explicit narrative edges; shared document IDs are not causal proof.
+- Paragraph verification must not use another slot's evidence.
+- Fail closed on unresolved message IDs, span hash changes, unknown assertion IDs, and allowlist escapes.
+- Do not promote this path without held-out validation showing grounded improvement.

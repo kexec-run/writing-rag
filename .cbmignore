@@ -1,0 +1,10 @@
+# Personal corpus and all derived retrieval artifacts.
+data/
+
+# Local model weights and runtime state.
+models/
+.serena/
+.codex/
+.venv/
+chroma/
+__pycache__/

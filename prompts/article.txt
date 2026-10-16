@@ -1,0 +1,4 @@
+Write a coherent article grounded in the retrieved evidence. Preserve the author's
+actual distinctions and uncertainty. Do not invent claims that are not supported
+by the evidence. Use the style view only for voice and cadence, not as factual
+evidence. When evidence conflicts or is incomplete, say so explicitly.

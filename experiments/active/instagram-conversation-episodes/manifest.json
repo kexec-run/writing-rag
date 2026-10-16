@@ -1,0 +1,40 @@
+{
+  "schema_version": "instagram-overlapping-episodes-manifest-v1",
+  "status": "active",
+  "intent": "reconstruct overlapping two-person Instagram conversation episodes for context-aware Qwen retrieval and self-only style selection",
+  "entrypoint": "experiments/active/instagram-conversation-episodes/instagram_episode_experiment.py",
+  "reference_paths": [
+    "scripts/instagram_anchor_chain_experiment.py",
+    "scripts/instagram_chain_chunk_experiment.py",
+    "scripts/build_reasoning_chains.py"
+  ],
+  "human_labels": false,
+  "production_path_changed": false,
+  "jina_chain_selection": {
+    "status": "archived",
+    "decision": "structural_only",
+    "path": "experiments/archived/instagram-chain-selection-jina-v1",
+    "article_holdout_authorized": false
+  },
+  "initial_method": "C1_overlap_context_causal_v1",
+  "screening_budget": {
+    "anchors_per_cohort": 12,
+    "cohorts": ["p99", "p95", "p90"],
+    "alternative_methods_max": 2,
+    "runs_per_alternative": 5,
+    "confirmation_anchors": 60
+  },
+  "hard_invariants": [
+    "every message ID resolves to canonical provenance",
+    "episode message order is chronological",
+    "style projection contains self messages only",
+    "context summaries retain source message IDs",
+    "alternate boundaries remain inspectable",
+    "Qwen remains the only retrieval model"
+  ],
+  "terminal_decisions": [
+    "direction_supported",
+    "structural_only",
+    "archive_experiment"
+  ]
+}

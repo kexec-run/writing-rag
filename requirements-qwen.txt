@@ -1,0 +1,7 @@
+# Optional semantic retrieval and Apple Silicon generation runtime.
+sentence-transformers>=3.0
+transformers>=4.45
+torch>=2.2
+chromadb>=0.5
+mlx-lm>=0.20; platform_system == "Darwin" and platform_machine == "arm64"
+mlx-vlm>=0.3; platform_system == "Darwin" and platform_machine == "arm64"

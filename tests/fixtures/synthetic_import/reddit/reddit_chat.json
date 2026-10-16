@@ -1,0 +1,18 @@
+[
+  {
+    "type": "m.room.message",
+    "room_id": "!synthetic-room:example.invalid",
+    "event_id": "$synthetic-1",
+    "origin_server_ts": 1704110400000,
+    "sender": "@partner:example.invalid",
+    "content": {"body": "The calendar and email list different meeting times. Could they use different time zones?"}
+  },
+  {
+    "type": "m.room.message",
+    "room_id": "!synthetic-room:example.invalid",
+    "event_id": "$synthetic-2",
+    "origin_server_ts": 1704110460000,
+    "sender": "@demo-author:example.invalid",
+    "content": {"body": "I'll compare the time-zone settings before deciding the schedule changed."}
+  }
+]

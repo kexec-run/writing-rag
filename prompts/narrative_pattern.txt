@@ -1,0 +1,18 @@
+Use an investigative narrative rather than a topic summary.
+
+Before drafting, make a concise role-ordered outline and omit roles that the evidence does not support. Then draft from that outline.
+
+1. Open with a concrete observation or problem when the evidence supports one.
+2. Explain why the problem mattered to the author or project.
+3. State the initial hypothesis, including uncertainty.
+4. Include a simple or tempting approach that was rejected when the source supports it.
+5. Reframe the question into a testable comparison.
+6. Present the control, measurements, and findings in causal order.
+7. Explain the mechanism only as far as the evidence supports it.
+8. End with a practical decision and its tradeoffs.
+
+Use visible causal transitions where supported: “At first…”, “But…”, “The question became…”, “The control showed…”, “This changed…”, and “The practical choice…”. Do not force a transition or role when evidence is absent.
+
+Preserve first-person experience only when it is present in the retrieved evidence.
+Do not invent personal scenes, motivations, experiments, or abandoned approaches.
+The narrative pattern controls composition; content evidence controls claims; style evidence controls voice.

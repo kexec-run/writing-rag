@@ -1,0 +1,58 @@
+{
+  "experiment_id": "qwen-jina-text-selection",
+  "status": "completed_inconclusive",
+  "production_retriever": "Qwen/Qwen3-Embedding-0.6B",
+  "auxiliary_selector": "jinaai/jina-embeddings-v5-text-small-mlx",
+  "selector_task": "text-matching",
+  "conditions": {
+    "A0": "qwen_retrieval_only",
+    "A1": "qwen_retrieval_then_jina_selection"
+  },
+  "candidate_boundary": "Jina may only reorder or select IDs already returned by Qwen.",
+  "production_default": "A0",
+  "adoption_gate": {
+    "mrr_delta_min": 0.02,
+    "ndcg_delta_min": 0.03,
+    "recall_drop_max": 0.0,
+    "hard_negative_failure_delta_max": 0,
+    "downstream_acceptance_drop_max": 0
+  },
+  "revisit_after": [
+    "larger held-out candidate-labelled set",
+    "fixed Qwen candidate pool and provenance",
+    "same generator and evidence budget in both conditions"
+  ],
+  "runner": "scripts/qwen_jina_article_ablation.py",
+  "runtime_adapter": "scripts/jina_text_matching_mlx.py",
+  "article_output": "data/generated/qwen-jina-article-ablation-v1",
+  "scaffold_ablation_runner": "scripts/scaffold_jina_article_ablation.py",
+  "scaffold_ablation_outputs": [
+    "data/generated/scaffold-jina-article-ablation-v1",
+    "data/generated/scaffold-jina-article-ablation-v2"
+  ],
+  "scaffold_ablation_decision": {
+    "status": "inconclusive",
+    "closest_condition": "B2_lite__Jina",
+    "closest_condition_validation_issues": 3,
+    "accepted_public_article": false,
+    "global_pool_limitation": true,
+    "next_required_test": "Qwen retrieval per scaffold slot followed by bounded Jina selection within each slot pool"
+  },
+  "observed_result": {
+    "metal_probe": "passed",
+    "pilot_mrr_qwen": 0.8,
+    "pilot_mrr_qwen_then_jina": 0.85,
+    "pilot_ndcg_at_10_qwen": 0.8586,
+    "pilot_ndcg_at_10_qwen_then_jina": 0.8884,
+    "pilot_rank_1_qwen": "12/20",
+    "pilot_rank_1_qwen_then_jina": "14/20",
+    "pilot_hard_negative_failures_qwen": 8,
+    "pilot_hard_negative_failures_qwen_then_jina": 5,
+    "pilot_changed_case_count": 7,
+    "article_a0_status": "rejected",
+    "article_a1_status": "rejected",
+    "article_a0_validation_issue_count": 14,
+    "article_a1_validation_issue_count": 2,
+    "promotion_decision": "retain_qwen_default"
+  }
+}

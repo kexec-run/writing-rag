@@ -1,0 +1,14 @@
+---
+description: Do not rewrite decisions or promote unconfirmed pilots
+globs: docs/**,experiments/**/README.md,AGENTS.md,README.md
+alwaysApply: false
+---
+
+# No promotion without evidence
+
+- Do not rewrite ledger decisions in docs or READMEs.
+- `direction_supported` and `not_confirmed` are not production policy.
+- Shape-Beat (`future-shape-beat-architecture.md`) is proposed, not implemented.
+- Do not promote on fluency, Recall@10 alone, or scaffold richness.
+- Pilot metrics belong in `docs/architecture/experiment-ledger.md`, not `AGENTS.md` or rules.
+- Experiment READMEs document local runs; the ledger is the compact decision record.

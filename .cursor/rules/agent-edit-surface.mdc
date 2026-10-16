@@ -1,0 +1,23 @@
+---
+description: Agent read and edit strategy for this repo
+alwaysApply: true
+---
+
+# Agent edit surface
+
+- Prefer symbol search, grep, and targeted reads over opening whole files.
+- Prefer editing `writing_rag/<boundary>/`; plan logic lives in `writing_rag/plan/`.
+- Do not open hub scripts unless the task names them:
+  `scripts/run_pipeline.py`.
+- `scripts/article_plan.py`, `scripts/source_hydration.py`,
+  `scripts/narrative_reconstruction.py`, `scripts/generate.py`,
+  `scripts/paragraph_generation.py`, `scripts/paragraph_stages.py`,
+  `scripts/generation_calls.py`, `scripts/evidence_trace.py`,
+  `scripts/build_markdown_content.py`, `scripts/causal_probability.py`,
+  and other `scripts/extract_*` / `scripts/create_*` / `scripts/build_*`
+  ingest doorbells are compatibility shims only.
+- Edit the smallest module that owns the behavior; do not refactor neighbors.
+- Do not grow retrieve/plan/select/generate/verify policy in `scripts/`.
+- Thin experiment entries in `scripts/` are allowed (doorbell); logic belongs in `writing_rag/`.
+- For model-role policy, follow the glob rule matching the files you edit.
+- For experiment history and metrics, use `docs/architecture/experiment-ledger.md`.

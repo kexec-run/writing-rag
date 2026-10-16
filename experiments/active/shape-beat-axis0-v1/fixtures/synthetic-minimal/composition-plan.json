@@ -1,0 +1,103 @@
+{
+  "author_assertions": [],
+  "beats": [
+    {
+      "depends_on": [],
+      "establishes": [],
+      "grounds": [
+        "uncertainty_frame"
+      ],
+      "id": "B01-01",
+      "order": 1,
+      "purpose": "Ground uncertainty",
+      "requires": [],
+      "shape_id": "S01"
+    },
+    {
+      "depends_on": [],
+      "establishes": [],
+      "grounds": [
+        "decision_threshold"
+      ],
+      "id": "B02-01",
+      "order": 1,
+      "purpose": "Establish threshold",
+      "requires": [
+        "uncertainty_frame"
+      ],
+      "shape_id": "S02"
+    }
+  ],
+  "evidence_obligations": [
+    {
+      "authority": "source_backed",
+      "binds": {
+        "beat_id": "B01-01",
+        "shape_id": "S01"
+      },
+      "kind": "witness",
+      "obligation_id": "OBL-001",
+      "purpose": "Witness uncertainty source",
+      "witness": {
+        "span_id": "span-fixture-001"
+      }
+    },
+    {
+      "authority": "source_backed",
+      "binds": {
+        "beat_id": "B02-01",
+        "shape_id": "S02"
+      },
+      "kind": "witness",
+      "obligation_id": "OBL-002",
+      "purpose": "Witness threshold source",
+      "witness": {
+        "span_id": "span-fixture-002"
+      }
+    }
+  ],
+  "plan_id": "synthetic-minimal-v1",
+  "plan_sha256": "5ff6bc6cd643af08ff2031eaee44e6dfcaf6bdb897eedd1de48c24dbd226e2f5",
+  "schema_version": "composition-plan-v0",
+  "shapes": [
+    {
+      "entry": {
+        "required": []
+      },
+      "exit": {
+        "forbidden": [],
+        "required": [
+          "uncertainty_frame"
+        ]
+      },
+      "id": "S01",
+      "order": 1,
+      "purpose": "Open the uncertainty frame",
+      "relations": [
+        {
+          "from": "S01",
+          "relation": "motivates",
+          "to": "S02"
+        }
+      ]
+    },
+    {
+      "entry": {
+        "required": [
+          "uncertainty_frame"
+        ]
+      },
+      "exit": {
+        "forbidden": [],
+        "required": [
+          "decision_threshold"
+        ]
+      },
+      "id": "S02",
+      "order": 2,
+      "purpose": "Close with decision threshold",
+      "relations": []
+    }
+  ],
+  "thesis": "Evidence moves from uncertainty to a decision threshold."
+}

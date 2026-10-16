@@ -1,0 +1,22 @@
+---
+description: Experiments must not change production paths
+globs: experiments/**,scripts/*experiment*.py,scripts/*ablation*.py,scripts/*confirmation*.py,scripts/*characterization*.py,writing_rag/**
+alwaysApply: false
+---
+
+# Experiment isolation
+
+Doorbell / house / run-folder:
+
+- CLI: `scripts/<name>_experiment|confirmation|ablation.py` (thin; no policy)
+- Record: `experiments/active|archived/<name>/` (manifest, README, fixtures)
+- Logic: `writing_rag/<boundary>/` (shared; no fork of hubs)
+
+Hard: no retrieve/plan/select/generate/verify policy in `scripts/`.
+Soft: CLI ≤150 lines preferred; ≤250 only for runtime/I/O glue; still no policy.
+
+- Experiment code must not change production retrieval, generation, or verification.
+- Do not copy 1700-line confirmation scripts; share a harness or config instead.
+- Do not treat fluency, aggregate Recall@10 alone, or scaffold richness as promotion.
+- Record decisions in the experiment README and `docs/architecture/experiment-ledger.md`.
+- Archived paths stay archived unless the ledger lists a revisit condition.

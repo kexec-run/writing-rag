@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "timestamp_ms": 1704110400000,
+      "sender_name": "Conversation Partner",
+      "content": "The meeting invitation shows a different start time from the email. Which one should I use?"
+    },
+    {
+      "timestamp_ms": 1704110460000,
+      "sender_name": "Demo Author",
+      "content": "I checked the time zone on both before assuming either one was wrong."
+    },
+    {
+      "timestamp_ms": 1704110520000,
+      "sender_name": "Conversation Partner",
+      "content": "Did the time-zone setting explain why the two times differ?"
+    },
+    {
+      "timestamp_ms": 1704110580000,
+      "sender_name": "Demo Author",
+      "content": "Yes. One time is UTC and the other is local. I'll confirm the schedule with the organizer."
+    }
+  ]
+}

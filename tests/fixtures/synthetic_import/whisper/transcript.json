@@ -1,0 +1,12 @@
+{
+  "transcription": [
+    {
+      "text": "I noticed the meeting time differed between the calendar invitation and the email.",
+      "offsets": {"from": 0, "to": 3200}
+    },
+    {
+      "text": "I compared their time-zone settings before deciding that the schedule itself had changed.",
+      "offsets": {"from": 3400, "to": 7600}
+    }
+  ]
+}

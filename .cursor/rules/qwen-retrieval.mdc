@@ -1,0 +1,15 @@
+---
+description: Qwen owns production corpus retrieval
+globs: scripts/retrieve.py,scripts/embed_chunks.py,scripts/run_pipeline.py,scripts/ingest_chroma.py,scripts/build_retrieval_documents.py,scripts/graph_retrieve.py,scripts/facet_retrieve.py,tests/test_graph_retrieve.py,writing_rag/retrieve/**
+alwaysApply: false
+---
+
+# Qwen retrieval contract
+
+- Production retrieval uses `Qwen/Qwen3-Embedding-0.6B` only.
+- Hashing is allowed only as an explicit, recorded fallback.
+- Do not register Jina as a retrieval backend.
+- Do not encode retrieval queries or documents with Jina.
+- Do not replace Qwen vectors with Jina vectors or mix vector spaces.
+- Do not change the production retrieval path from experiment code.
+- `content_memory` and `style_memory` stay on separate Qwen indices.

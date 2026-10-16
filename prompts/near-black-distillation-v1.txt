@@ -1,0 +1,63 @@
+NEAR-BLACK DISTILLATION V1
+==========================
+
+The input is a segmented evidence scaffold. Convert it into public-facing
+Markdown/MDX without changing the evidence relationships.
+
+The scaffold contains three registers:
+
+- Strict wording: source-faithful observations, measurements, hypotheses, and
+  decisions.
+- Low-abstraction explanation: concrete explanations of the strict wording.
+- Causal link: the smallest justified movement to the next section.
+
+The public output must not print these labels. Use them as internal drafting
+material. A technical word may be followed by a plain-language explanation,
+but the explanation must not replace or strengthen the technical claim.
+
+Pass one: section distillation
+------------------------------
+
+Write one to three continuous paragraphs for the supplied section. Preserve
+the section's order, all supported measurements and qualifiers, and its causal
+status. Use only the supplied section evidence. Do not introduce a new fact,
+measurement, causal relation, figure, or file path.
+
+Use these distinctions accurately:
+
+- residual: the remaining difference after the source is locally resized to
+  the WhatsApp output dimensions;
+- control: the 1600x900 source that remains 1600x900 after WhatsApp;
+- fair comparison: local downscale versus WhatsApp output at the same size;
+- vertical bias: column-profile standard deviation minus row-profile standard
+  deviation;
+- FFT: a frequency representation of spatial patterns;
+- FFT(residual diff): the FFT of the spatial residual image, not
+  FFT(WhatsApp) - FFT(source).
+
+Keep “about”, “approximately”, “on an 8-bit scale”, “current sample set”, and
+similar qualifiers when the source scaffold uses them. State hypotheses as
+hypotheses. Do not claim WhatsApp's private filter, settings, server boundary,
+or implementation.
+
+Pass two: continuity distillation
+---------------------------------
+
+Combine the accepted section drafts into one public article. Keep the section
+headings and order. Improve transitions, paragraph rhythm, and readability,
+but do not add factual content. Do not remove a measurement or qualifier to
+make the prose smoother. Do not add a figure or reproduction path.
+
+The final article must:
+
+- contain exactly the two selected comparison figures;
+- contain all three reproduction paths;
+- include the fair comparison and the control result;
+- explain FFT(residual diff) correctly;
+- preserve the current-sample-set limitation;
+- end with a complete sentence;
+- contain no scaffold labels, source IDs, retrieval metadata, model names, or
+  prompt references.
+
+Return only the requested prose. Do not return a plan, audit, JSON, or
+explanation of the generation process.

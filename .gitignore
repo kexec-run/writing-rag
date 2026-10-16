@@ -1,0 +1,34 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+secrets.*
+*credentials*.json
+config.local.*
+__pycache__/
+*.egg-info/
+*.py[cod]
+.venv/
+
+# Corpus inputs and generated outputs are private local state.
+/data/
+
+# Downloaded models and local caches.
+/models/weights/
+.cache/
+**/.cache/huggingface/
+
+# Local indexes and code-navigation databases.
+chroma/
+*.db
+*.sqlite
+*.sqlite3
+.codegraph/
+.codebase-memory/
+.serena/

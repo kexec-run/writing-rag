@@ -1,0 +1,33 @@
+{
+  "allowed_witness_ids": [
+    "doc-fixture-001",
+    "doc-fixture-002",
+    "span-fixture-001",
+    "span-fixture-002"
+  ],
+  "candidate_document_ids": [
+    "doc-fixture-001",
+    "doc-fixture-002"
+  ],
+  "candidates": [
+    {
+      "document_id": "doc-fixture-001",
+      "edge_id": null,
+      "order": 0,
+      "span_id": "span-fixture-001",
+      "text_sha256": "0828e67870a1b09a5d7e90e42d4551cc3132891d8a32ad91c86bb8dbd5223ae9"
+    },
+    {
+      "document_id": "doc-fixture-002",
+      "edge_id": null,
+      "order": 1,
+      "span_id": "span-fixture-002",
+      "text_sha256": "04be90098235a1d3388e857e1ec1defd3c01972e15fe41f9fe1f84a00e094251"
+    }
+  ],
+  "evidence_budget": 6,
+  "query": "uncertainty to decision threshold",
+  "query_sha256": "1b23306dfc59147c1e246d0a5fb3748f779fabc0e958d0f8412166f8e4283a80",
+  "qwen_metadata_sha256": "1af75adc7a37662b555ac4e64bc1aab0c795e750e36b32e87edd3f996647e35a",
+  "schema_version": "g0-freeze-v0"
+}

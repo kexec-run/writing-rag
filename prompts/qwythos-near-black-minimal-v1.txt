@@ -1,0 +1,19 @@
+QWYTHOS NEAR-BLACK VALIDATION: MINIMAL CONDITION
+
+Write one coherent public-facing Markdown article about the near-black WhatsApp
+image artifact described by the evidence packet. Use the evidence packet as the
+only source of factual content. Explain the investigation in a readable,
+technical voice, but do not copy the evidence mechanically.
+
+Keep the article concise, under 900 words, and make sure the final paragraph
+ends with a complete sentence before returning.
+
+Preserve every qualifier in the evidence. Keep observations, measurements,
+hypotheses, and conclusions distinct. Do not turn a plausible processing path
+into a proven private implementation detail. If the evidence does not support a
+claim, omit it or state the limitation.
+
+Return only the article. Do not mention this prompt, the validation, the writer,
+the verifier, source identifiers, retrieval, or hidden reasoning. Do not add
+facts, figures, file paths, citations, or reproduction methods that are absent
+from the evidence packet.

@@ -1,0 +1,4 @@
+01/01/24, 12:00 - Conversation Partner: The calendar invite and email show different meeting times.
+01/01/24, 12:01 - Demo Author: I checked the time-zone settings before assuming the schedule changed.
+01/01/24, 12:02 - Conversation Partner: So one display may be UTC and the other local time?
+01/01/24, 12:03 - Demo Author: Right. I'll confirm the intended start time with the organizer.

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "writing-rag"
+version = "0.0.0"
+description = "Local writing-memory pipeline library"
+readme = "writing_rag/README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24", "tiktoken"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["writing_rag*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "private_data: requires private corpus or evaluation artifacts",
+]

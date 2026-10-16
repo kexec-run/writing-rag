@@ -1,0 +1,14 @@
+---
+description: Jina is auxiliary text-matching and reranking only
+globs: scripts/jina*.py,experiments/**/jina*.py,experiments/active/qwen-top50-reranker*/**,experiments/active/j1-qwen-jina-confirmation-v1/**,experiments/archived/jina-*/**,experiments/archived/instagram-chain-selection-jina-v1/**,writing_rag/select/**
+alwaysApply: false
+---
+
+# Jina auxiliary contract
+
+- Jina v5 MLX is symmetric `text-matching` only: `task_type="text-matching"`, no query/document prompt.
+- Use batch size `1` for MLX text-matching; do not trade symmetry for throughput.
+- Jina vectors live in separate artifacts with full backend metadata.
+- Reranker may only reorder a frozen Qwen top-50 pool; it cannot improve Recall@50.
+- Instagram Jina chain-selection is archived; do not retry thresholds, modes, models, or rerankers for that objective.
+- Pilot metrics and promotion status: `docs/architecture/experiment-ledger.md`.

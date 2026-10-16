@@ -1,0 +1,20 @@
+{
+  "schema_version": "shape-beat-axis0-manifest-v1",
+  "experiment_id": "shape-beat-axis0-v1",
+  "purpose": "offline validation harness for Shape–Beat composition plans, obligation parity, G0 identity, and unit-loop semantics without MLX generation",
+  "arms": ["validation-only"],
+  "fixture_paths": [
+    "experiments/active/shape-beat-axis0-v1/fixtures/synthetic-minimal",
+    "experiments/active/shape-beat-axis0-v1/fixtures/oracle-shape-heavy",
+    "experiments/active/shape-beat-axis0-v1/fixtures/oracle-beat-heavy"
+  ],
+  "fixed_contract": {
+    "retriever_backend": "qwen3",
+    "retriever_model": "Qwen/Qwen3-Embedding-0.6B",
+    "retriever_collection": "content_memory",
+    "initial_content_top_k": 6,
+    "evidence_budget": 6,
+    "generator_backend": null,
+    "mlx_generation": false
+  }
+}

@@ -1,8 +1,16 @@
 # writing-rag
 
 A local writing-memory prototype that turns chat and transcript exports into
-searchable, provenance-bearing evidence while keeping conversational context
-separate from self-authored style examples.
+searchable source material. It keeps conversational context separate from
+examples of your own writing and retains source references for review.
+
+> **Unfinished research project.** The synthetic demos are validated. Reliable
+> article generation and causal narrative reconstruction remain unresolved.
+> Several historical experiments require private inputs or omitted dependencies.
+
+[Synthetic demo](#try-the-synthetic-demo) ·
+[Architecture](docs/architecture/single-path.md) ·
+[Experiment history](docs/experiments/README.md)
 
 ```text
 selected local exports
@@ -85,6 +93,8 @@ a guardrail and does not replace file-by-file review.
 
 ## Experiments and limits
 
+### Validation snapshot
+
 Experiments are kept separate from the canonical Qwen retrieval path. Published
 summaries must distinguish implemented behavior from exploratory results and
 must not include corpus payloads or private evaluation traces. Reproducing
@@ -103,6 +113,8 @@ because excluded local Qwen characterization modules are unavailable;
 private-data skips and that optional collection blocker are not hidden by the
 passing default suite.
 
+### Research inventory
+
 The public [experiment catalog](docs/experiments/README.md) records 38 research
 lines, 25 named experiment directories, 96 excluded Python support or experiment
 files, and 222 held artifact directories. These are inventory counts, not
@@ -110,11 +122,15 @@ independent runs or samples. Each study separates implementation disposition
 from scientific outcome and marks results transcribed from the private decision
 ledger.
 
+### Reproduction limits
+
 An optional experiment-test collection produced two errors because excluded
 local Qwen characterization modules are unavailable. Static inspection found
 11 imports from public experiment/test files that resolve only to excluded local
 modules. Some runners also require private corpora or generated artifacts. The
 catalog records known blockers; this release step did not restore those paths.
+
+### Current research direction
 
 The canonical retrieval path uses Qwen. Jina text matching remains auxiliary,
 and the Jina reranker result is unconfirmed. Ranking gains have not yet produced

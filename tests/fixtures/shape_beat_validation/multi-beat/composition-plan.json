@@ -1,0 +1,101 @@
+{
+  "author_assertions": [],
+  "beats": [
+    {
+      "depends_on": [],
+      "establishes": ["initial_condition"],
+      "grounds": [],
+      "id": "B01-01",
+      "order": 1,
+      "purpose": "State the starting condition",
+      "requires": [],
+      "shape_id": "S01"
+    },
+    {
+      "depends_on": [],
+      "establishes": ["counterexample"],
+      "grounds": [],
+      "id": "B02-01",
+      "order": 1,
+      "purpose": "Introduce a counterexample",
+      "requires": ["initial_condition"],
+      "shape_id": "S02"
+    },
+    {
+      "depends_on": ["B02-01"],
+      "establishes": ["revised_interpretation"],
+      "grounds": [],
+      "id": "B02-02",
+      "order": 2,
+      "purpose": "Revise the interpretation",
+      "requires": ["counterexample"],
+      "shape_id": "S02"
+    },
+    {
+      "depends_on": ["B02-02"],
+      "establishes": ["decision_basis"],
+      "grounds": [],
+      "id": "B02-03",
+      "order": 3,
+      "purpose": "State the resulting decision basis",
+      "requires": ["revised_interpretation"],
+      "shape_id": "S02"
+    }
+  ],
+  "evidence_obligations": [
+    {
+      "authority": "source_backed",
+      "binds": {"beat_id": "B01-01", "shape_id": "S01"},
+      "kind": "witness",
+      "obligation_id": "OBL-001",
+      "purpose": "Witness the starting condition",
+      "witness": {"span_id": "span-demo-001"}
+    },
+    {
+      "authority": "source_backed",
+      "binds": {"beat_id": "B02-01", "shape_id": "S02"},
+      "kind": "witness",
+      "obligation_id": "OBL-002",
+      "purpose": "Witness the counterexample",
+      "witness": {"span_id": "span-demo-002"}
+    },
+    {
+      "authority": "source_backed",
+      "binds": {"beat_id": "B02-02", "shape_id": "S02"},
+      "kind": "witness",
+      "obligation_id": "OBL-003",
+      "purpose": "Witness the revised interpretation",
+      "witness": {"span_id": "span-demo-003"}
+    },
+    {
+      "authority": "source_backed",
+      "binds": {"beat_id": "B02-03", "shape_id": "S02"},
+      "kind": "witness",
+      "obligation_id": "OBL-004",
+      "purpose": "Witness the decision basis",
+      "witness": {"span_id": "span-demo-004"}
+    }
+  ],
+  "plan_id": "synthetic-multi-beat-v1",
+  "plan_sha256": "efdade55a5e13249f067543723077c28aba8986f296436f2397eff7642c3bc25",
+  "schema_version": "composition-plan-v0",
+  "shapes": [
+    {
+      "entry": {"required": []},
+      "exit": {"forbidden": [], "required": ["initial_condition"]},
+      "id": "S01",
+      "order": 1,
+      "purpose": "Establish the starting condition",
+      "relations": [{"from": "S01", "relation": "sets_up", "to": "S02"}]
+    },
+    {
+      "entry": {"required": ["initial_condition"]},
+      "exit": {"forbidden": [], "required": ["decision_basis"]},
+      "id": "S02",
+      "order": 2,
+      "purpose": "Move through counterexample and revision to a decision",
+      "relations": []
+    }
+  ],
+  "thesis": "A counterexample changes an interpretation and informs a decision."
+}

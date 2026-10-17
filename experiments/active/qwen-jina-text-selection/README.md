@@ -50,19 +50,13 @@ recorded as marginal/inconclusive.
 
 ## Historical private-checkout runner
 
-The command below documents the private-checkout experiment. Its runner and
-generated result files are intentionally omitted from this public seed, so it
-is not executable from this snapshot. Reproduction requires the private
-checkout and its local model cache.
-
-```bash
-/bin/zsh -lc 'cd /path/to/writing-rag && /opt/homebrew/bin/python3 scripts/qwen_jina_article_ablation.py --model-cache models/weights/huggingface --output data/generated/qwen-jina-article-ablation-v1'
-```
-
-The runner also evaluates the fixed Qwen local pools from the frozen pilot. It
-writes A0/A1 article outputs, Jina selection traces, pilot metrics, and a
-comparison report. A successful article run alone cannot promote Jina: the
-retrieval gate and downstream grounded-generation gate must both pass.
+The historical run used an omitted private-checkout runner and local model
+cache. It evaluated fixed Qwen local pools and produced A0/A1 article outputs,
+Jina selection traces, pilot metrics, and a comparison report. Neither that
+runner nor its generated outputs are included in this public snapshot; no
+command here reproduces the corpus experiment. A successful article run alone
+could not promote Jina: both the retrieval and downstream grounded-generation
+gates had to pass.
 
 ## Observed result
 
@@ -82,8 +76,9 @@ shows a downstream improvement in this run, but neither article passed the
 acceptance gate, so the experiment does not authorize changing the production
 path. Keep Qwen retrieval and A0 as the default.
 
-Private result location: `data/generated/qwen-jina-article-ablation-v1/comparison.md`
-(not included in this public snapshot).
+The private result location was
+`data/generated/qwen-jina-article-ablation-v1/comparison.md`; it is not
+included in this public snapshot.
 
 ## Scaffold ablation
 
@@ -108,9 +103,24 @@ once for the whole article rather than separately for each scaffold slot. The
 next test should use Qwen per-slot retrieval, followed by Jina reordering inside
 each slot's Qwen pool. No production policy is changed by this ablation.
 
-Historical private-checkout runner: `scripts/scaffold_jina_article_ablation.py`
-(not included in this public snapshot).
+The historical private-checkout runner was
+`scripts/scaffold_jina_article_ablation.py`; it is not included in this public
+snapshot.
 
-Private result locations: `data/generated/scaffold-jina-article-ablation-v1/comparison.md`
-and `data/generated/scaffold-jina-article-ablation-v2/comparison.md` (not
-included in this public snapshot).
+The private result locations were
+`data/generated/scaffold-jina-article-ablation-v1/comparison.md` and
+`data/generated/scaffold-jina-article-ablation-v2/comparison.md`; neither is
+included in this public snapshot.
+
+## Public research record
+
+Disposition: `results-only`. Jina did not retrieve from the corpus. A ranking gain and an accepted article are separate outcomes.
+
+See the [sanitized study summary](../../../docs/experiments/studies/study-026.md) and [complete experiment catalog](../../../docs/experiments/README.md).
+
+## Public availability
+
+- Catalog disposition: `results-only` ([study-026](../../../docs/experiments/studies/study-026.md)).
+- Present in this folder: `README.md` and `manifest.json`.
+- Omitted: historical private runners, the Qwen candidate pool and corpus, model weights/cache, and all generated article, selection-trace, and comparison outputs named above.
+- Reproduction limit: this page preserves the reported bounded comparison; neither the article ablation nor scaffold ablation is runnable from this public folder.

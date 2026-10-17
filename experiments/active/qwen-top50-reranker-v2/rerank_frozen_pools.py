@@ -11,8 +11,6 @@ import time
 from pathlib import Path
 from typing import Any
 
-from huggingface_hub import snapshot_download
-
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_SUBSTRATE = PROJECT_ROOT / "data/generated/qwen-top50-reranker-v2/frozen-top50.json"
 DEFAULT_MODEL_CACHE = PROJECT_ROOT / "models/weights/huggingface/hub"
@@ -36,6 +34,8 @@ FREEZE = _load_freeze_module()
 
 
 def _resolve_snapshot(model_cache: Path, model_id: str) -> tuple[str, str]:
+    from huggingface_hub import snapshot_download
+
     path = snapshot_download(
         repo_id=model_id,
         cache_dir=str(model_cache),

@@ -1,0 +1,53 @@
+{
+  "allowed_witness_ids": [
+    "doc-synthetic-001",
+    "doc-synthetic-002",
+    "doc-synthetic-003",
+    "doc-synthetic-004",
+    "span-demo-001",
+    "span-demo-002",
+    "span-demo-003",
+    "span-demo-004"
+  ],
+  "candidate_document_ids": [
+    "doc-synthetic-001",
+    "doc-synthetic-002",
+    "doc-synthetic-003",
+    "doc-synthetic-004"
+  ],
+  "candidates": [
+    {
+      "document_id": "doc-synthetic-001",
+      "edge_id": null,
+      "order": 0,
+      "span_id": "span-demo-001",
+      "text_sha256": "8a173cb7895695a342000471253d47f250eb384b8604ba8690ee61512630aea7"
+    },
+    {
+      "document_id": "doc-synthetic-002",
+      "edge_id": null,
+      "order": 1,
+      "span_id": "span-demo-002",
+      "text_sha256": "97baf87d781ffafc6a64c20ad04c9a45f79c5656df59201a140dfaf9d60aa5f3"
+    },
+    {
+      "document_id": "doc-synthetic-003",
+      "edge_id": null,
+      "order": 2,
+      "span_id": "span-demo-003",
+      "text_sha256": "55ddc2f04bdc01b179fcb665827444cff1d5362a6589f034f9c338434d4c9748"
+    },
+    {
+      "document_id": "doc-synthetic-004",
+      "edge_id": null,
+      "order": 3,
+      "span_id": "span-demo-004",
+      "text_sha256": "cee802bc4af437b532cd1528d55f04f092296f03b7aeaf524baa5f6244620fc4"
+    }
+  ],
+  "evidence_budget": 4,
+  "query": "synthetic starting condition to revised decision",
+  "query_sha256": "e6a03fc5388ca3b0ca93d184e1d81e5ede882ead2e7fad0bb460992e916d49cb",
+  "qwen_metadata_sha256": "9d3e137ccc91ff826b97a06d080216bcf279550c154385201ea93f6823b2f8c5",
+  "schema_version": "g0-freeze-v0"
+}

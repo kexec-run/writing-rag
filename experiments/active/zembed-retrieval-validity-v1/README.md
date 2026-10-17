@@ -27,3 +27,16 @@ does not increase. This remains exploratory and does not change production.
 `directional_only` records a non-marginal signal that misses a full gate;
 `not_supported` records no useful signal; a failed contract is
 `invalid_mlx_checkpoint_or_adapter`.
+
+## Public research record
+
+Disposition: `results-only`. Without the private frozen cases and full sanitized reports, aggregate outcomes are not re-computed here.
+
+See the [sanitized study summary](../../../docs/experiments/studies/study-039.md) and [complete experiment catalog](../../../docs/experiments/README.md).
+
+## Public availability
+
+- Catalog disposition: `results-only` ([study-039](../../../docs/experiments/studies/study-039.md)).
+- Present in this folder: `README.md`, `__init__.py`, `decide_confirmation.py`, `instagram_confirmation.py`, `instagram_screen.py`, `instagram_validation.py`, `padding_parity_smoke.py`, `run_retrieval_experiment.py`, `source_validation.py`, `validate_artifacts.py`, and `zembed_mlx_backend.py`.
+- Omitted: the private frozen cases, corpus, labels, model weights/cache, and full sanitized execution reports.
+- Reproduction limit: the retained implementation is historical code; without its frozen private evaluation substrate, public execution cannot reproduce the reported semantic metrics.

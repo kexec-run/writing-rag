@@ -44,3 +44,16 @@ The two-target smoke is a wiring gate, not a promotion result.
 2. Run `mdx-animal` and `message-causal` as the smoke phase.
 3. Run all four targets only when smoke passes.
 4. Write one decision report and stop.
+
+## Public research record
+
+Disposition: `results-only`. Private outlines, source plans, assertions and per-target payloads are excluded. Do not infer a general win from an individual accepted or rejected draft.
+
+See the [sanitized study summary](../../../docs/experiments/studies/study-001.md) and [complete experiment catalog](../../../docs/experiments/README.md).
+
+## Public availability
+
+- Catalog disposition: `results-only` ([study-001](../../../docs/experiments/studies/study-001.md)).
+- Present in this folder: `README.md` only.
+- Omitted: private outlines, source plans and assertions, corpus, model cache, runner, and generated target-level outputs.
+- Reproduction limit: this is a sanitized historical protocol and result summary, not an executable experiment bundle.

@@ -1,0 +1,12 @@
+{
+  "schema_version": "ranking-replay-fixture-spec-v1",
+  "notice": "Synthetic contract fixture. No model or private corpus is used.",
+  "queries": [
+    {"query_id": "synthetic-q01", "fold": "fold-a", "band": "p90", "native_rank": 1, "qwen_rank": 1, "jina_rank": 2},
+    {"query_id": "synthetic-q02", "fold": "fold-b", "band": "p90", "native_rank": 7, "qwen_rank": 5, "jina_rank": 6},
+    {"query_id": "synthetic-q03", "fold": "fold-a", "band": "p95", "native_rank": 12, "qwen_rank": 8, "jina_rank": 3},
+    {"query_id": "synthetic-q04", "fold": "fold-b", "band": "p95", "native_rank": 20, "qwen_rank": 15, "jina_rank": 25},
+    {"query_id": "synthetic-q05", "fold": "fold-a", "band": "p99", "native_rank": 4, "qwen_rank": 11, "jina_rank": 4},
+    {"query_id": "synthetic-q06", "fold": "fold-b", "band": "p99", "native_rank": 51, "qwen_rank": 51, "jina_rank": 51}
+  ]
+}

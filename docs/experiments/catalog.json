@@ -1,0 +1,2953 @@
+{
+  "coverage": {
+    "dispositions": {
+      "pending sanitization": 8,
+      "results-only": 31
+    },
+    "excluded_python_support_or_experiment_files": 96,
+    "held_generated_artifact_directories": 222,
+    "interpretation": "directory and file inventory counts are not executions, independent cases, or successful experiments",
+    "named_experiment_directories": 25,
+    "research_lines": 38,
+    "support_groups": 1
+  },
+  "experiment_directories": [
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/article-plan-confirmation-v1",
+      "record_id": "experiment-dir-001",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/article-plan-draft-context-c2-focused-v1",
+      "record_id": "experiment-dir-002",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-003",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/article-plan-draft-context-c4-episode-slice-v1",
+      "record_id": "experiment-dir-004",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-005",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-006",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-007",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/article-plan-draft-context-v2",
+      "record_id": "experiment-dir-008",
+      "study_id": "study-001"
+    },
+    {
+      "disposition": "pending sanitization",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/instagram-chain-retrieval",
+      "record_id": "experiment-dir-009",
+      "study_id": "study-006"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-010",
+      "study_id": "study-009"
+    },
+    {
+      "disposition": "pending sanitization",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/instagram-conversation-episodes",
+      "record_id": "experiment-dir-011",
+      "study_id": "study-007"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/j1-qwen-jina-confirmation-v1",
+      "record_id": "experiment-dir-012",
+      "study_id": "study-011"
+    },
+    {
+      "disposition": "pending sanitization",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/obsidian-kb-poc-v1",
+      "record_id": "experiment-dir-013",
+      "study_id": "study-021"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/qwen-jina-text-selection",
+      "record_id": "experiment-dir-014",
+      "study_id": "study-026"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/qwen-top50-reranker",
+      "record_id": "experiment-dir-015",
+      "study_id": "study-028"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/qwen-top50-reranker-v2",
+      "record_id": "experiment-dir-016",
+      "study_id": "study-028",
+      "public_capability": {
+        "name": "synthetic_frozen_ranking_replay",
+        "status": "verified",
+        "entrypoint": "experiments/active/qwen-top50-reranker-v2/replay_frozen_rankings.py",
+        "fixture_builder": "tests/fixtures/ranking_replay/build_fixture.py",
+        "fixture_spec": "tests/fixtures/ranking_replay/fixture_spec.json",
+        "runs_models": false,
+        "reproduces_historical_metrics": false,
+        "allowed_commands": [
+          "python3 tests/fixtures/ranking_replay/build_fixture.py",
+          "python3 experiments/active/qwen-top50-reranker-v2/replay_frozen_rankings.py",
+          "python3 experiments/active/qwen-top50-reranker-v2/compare_rerankers.py",
+          "python3 experiments/active/j1-qwen-jina-confirmation-v1/verify_repeatability.py"
+        ],
+        "expected_invocations": {
+          "python3 tests/fixtures/ranking_replay/build_fixture.py": 1,
+          "python3 experiments/active/qwen-top50-reranker-v2/replay_frozen_rankings.py": 4,
+          "python3 experiments/active/qwen-top50-reranker-v2/compare_rerankers.py": 1,
+          "python3 experiments/active/j1-qwen-jina-confirmation-v1/verify_repeatability.py": 2
+        },
+        "allowed_argument_values": []
+      }
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-017",
+      "study_id": "study-032"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/shape-beat-axis0-v1",
+      "record_id": "experiment-dir-018",
+      "study_id": "study-033",
+      "public_capability": {
+        "name": "synthetic_shape_beat_validation",
+        "status": "verified",
+        "entrypoint": "experiments/active/shape-beat-axis0-v1/run_public_validation.py",
+        "cases": ["minimal", "multi-beat"],
+        "runs_models": false,
+        "reproduces_historical_metrics": false,
+        "allowed_commands": [
+          "python3 experiments/active/shape-beat-axis0-v1/run_public_validation.py"
+        ],
+        "expected_invocations": {
+          "python3 experiments/active/shape-beat-axis0-v1/run_public_validation.py": 2
+        },
+        "allowed_argument_values": ["minimal", "multi-beat"]
+      }
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-019",
+      "study_id": "study-033"
+    },
+    {
+      "disposition": "pending sanitization",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/uembed-instagram-retrieval-v1",
+      "record_id": "experiment-dir-020",
+      "study_id": "study-037"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/active/zembed-retrieval-validity-v1",
+      "record_id": "experiment-dir-021",
+      "study_id": "study-039"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/archived/embedding-runtime",
+      "record_id": "experiment-dir-022",
+      "study_id": "study-002"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/archived/instagram-chain-selection-jina-v1",
+      "record_id": "experiment-dir-023",
+      "study_id": "study-008"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": true,
+      "public_path": "experiments/archived/jina-model-characterization",
+      "record_id": "experiment-dir-024",
+      "study_id": "study-012"
+    },
+    {
+      "disposition": "results-only",
+      "present_in_public_seed": false,
+      "public_path": null,
+      "record_id": "experiment-dir-025",
+      "study_id": "study-014"
+    }
+  ],
+  "held_artifact_directories": [
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-001",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-002"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-002",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-002"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-003",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-004",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-005",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-006",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-007",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-008",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-009",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-010",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-011",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-012",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-013",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-014",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-015",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-016",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-017",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-018",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-019",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-020",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-021",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-001"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-022",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-023",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-024",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-025",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-026",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-027",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-028",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-029",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-030",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-031",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-032",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-003"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-033",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-034",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-035",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-036",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-037",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-038",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-039",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-040",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-041",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-004"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-042",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-005"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-043",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-006"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-044",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-009"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-045",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-046",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-047",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-048",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-049",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-050",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-051",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-052",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-053",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-054",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-055",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-056",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-057",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-058",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-059",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-007"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-060",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-008"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-061",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-008"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-062",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-008"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-063",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-010"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-064",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-010"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-065",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-010"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-066",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-010"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-067",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-011"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-068",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-069",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-070",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-071",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-072",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-073",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-074",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-075",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-076",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-077",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-078",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-079",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-080",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-012"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-081",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-013"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-082",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-013"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-083",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-013"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-084",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-014"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-085",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-014"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-086",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-014"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-087",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-014"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-088",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-014"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-089",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-014"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-090",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-015"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-091",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-015"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-092",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-016"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-093",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-016"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-094",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-016"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-095",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-016"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-096",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-097",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-098",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-099",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-100",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-101",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-102",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-103",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-104",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-105",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-106",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-107",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-108",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-109",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-110",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-017"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-111",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-002"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-112",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-002"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-113",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-002"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-114",
+      "record_kind": "empty-directory",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-002"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-115",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-019"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-116",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-117",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-118",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-119",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-120",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-121",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-122",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-123",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-124",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-125",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-036"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-126",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-036"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-127",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-036"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-128",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-036"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-129",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-036"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-130",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-036"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-131",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-021"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-132",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-133",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-134",
+      "record_kind": "empty-directory",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-135",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-136",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-137",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-138",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-139",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-140",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-141",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-022"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-142",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-023"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-143",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-023"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-144",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-024"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-145",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-146",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-147",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-148",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-149",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-150",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-151",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-152",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-153",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-154",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-155",
+      "record_kind": "repeatability-or-summary-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-156",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-157",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-158",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-159",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-160",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-025"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-161",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-026"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-162",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-027"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-163",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-028"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-164",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-028"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-165",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-028"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-166",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-167",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-168",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-020"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-169",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-170",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-171",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-172",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-173",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-174",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-175",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-176",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-177",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-178",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-029"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-179",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-030"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-180",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-030"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-181",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-031"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-182",
+      "record_kind": "empty-directory",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-018"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-183",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-018"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-184",
+      "record_kind": "empty-directory",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-018"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-185",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-032"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-186",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-032"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-187",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-032"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-188",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-189",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-190",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-191",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-192",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-193",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-194",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-195",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-196",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-197",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-198",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-199",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-200",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-201",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-202",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-203",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-204",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-033"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-205",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-035"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-206",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-035"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-207",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-035"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-208",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-035"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-209",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-037"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-210",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-038"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-211",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-038"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-212",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-213",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-214",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-215",
+      "record_kind": "intermediate-or-unclassified-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-216",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-217",
+      "record_kind": "report-or-validation-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-218",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-219",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-220",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-221",
+      "record_kind": "derived-model-or-vector-artifacts",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    },
+    {
+      "execution_count": null,
+      "record_id": "artifact-dir-222",
+      "record_kind": "decision-artifact-bundle",
+      "review_state": "directory_inventoried_outcome_not_individually_reaudited",
+      "study_id": "study-039"
+    }
+  ],
+  "legacy_implementations": [
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-001",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-007"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-002",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-007"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-003",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-007"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-004",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-011"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-005",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-011"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-006",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-021"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-007",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-021"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-008",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-021"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-009",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-037"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-010",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-037"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-011",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-037"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-012",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-039"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-013",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-039"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-014",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-039"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-015",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-002"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-016",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-002"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-017",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-008"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-018",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-019",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-020",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-021",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-022",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-023",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-024",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-025",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-026",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-027",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-028",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-029",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-030",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-031",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-032",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-033",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-034",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-012"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-035",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-027"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-036",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-009"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-037",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-038",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-039",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-040",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-041",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-042",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-043",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-044",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-045",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-046",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-047",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-048",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-016"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-049",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-050",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-017"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-051",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-052",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-038"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-053",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-015"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-054",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-003"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-055",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-020"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-056",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-003"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-057",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-058",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-059",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-060",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-061",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-020"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-062",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-024"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-063",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-004"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-064",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-005"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-065",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-008"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-066",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-006"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-067",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-006"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-068",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-006"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-069",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-006"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-070",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-009"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-071",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-072",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-006"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-073",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-074",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-015"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-075",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-017"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-076",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-020"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-077",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-020"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-078",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-036"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-079",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-001"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-080",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-006"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-081",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-034"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-082",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-025"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-083",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-026"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-084",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-027"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-085",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-020"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-086",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-020"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-087",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-030"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-088",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-017"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-089",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-032"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-090",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-017"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-091",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-023"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-092",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-033"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-093",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-037"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-094",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-033"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-095",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-025"
+    },
+    {
+      "present_in_public_seed": false,
+      "record_id": "implementation-096",
+      "record_kind": "excluded_python_support_or_experiment_file",
+      "study_id": "study-038"
+    }
+  ],
+  "schema_version": "sanitized-experiment-catalog-v1",
+  "studies": [
+    {
+      "decision": "experimental; no article-plan path is promoted as the default",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 12,
+      "held_artifact_directory_count": 19,
+      "id": "study-001",
+      "public_code_paths": [
+        "scripts/article_plan.py",
+        "writing_rag/plan/article_plan.py",
+        "writing_rag/plan/source_hydration.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-001.md",
+      "title": "Article planning and scoped draft context"
+    },
+    {
+      "decision": "remove the conversion path; no ANE backend or fallback",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 6,
+      "id": "study-002",
+      "public_code_paths": [
+        "scripts/embed_chunks.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-002.md",
+      "title": "Embedding runtime and Apple Neural Engine probes"
+    },
+    {
+      "decision": "duplicate retry variants were removed from the reusable path",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 11,
+      "id": "study-003",
+      "public_code_paths": [
+        "scripts/generate.py",
+        "scripts/paragraph_generation.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-003.md",
+      "title": "Generation engine and retry ablations"
+    },
+    {
+      "decision": "removed from production retrieval",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 9,
+      "id": "study-004",
+      "public_code_paths": [
+        "scripts/graph_retrieve.py",
+        "writing_rag/retrieve/graph_retrieve.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-004.md",
+      "title": "Graph-aware article retrieval"
+    },
+    {
+      "decision": "diagnostic record only; no independent promotion claim",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 1,
+      "id": "study-005",
+      "public_code_paths": [
+        "experiments/active/article-plan-confirmation-v1/README.md"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-005.md",
+      "title": "Holdout and near-black repeat studies"
+    },
+    {
+      "decision": "keep the filtered chain pilot exploratory; production ingestion is unchanged",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 6,
+      "held_artifact_directory_count": 1,
+      "id": "study-006",
+      "public_code_paths": [
+        "experiments/active/instagram-chain-retrieval/instagram_mdx_filtered_ablation.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-006.md",
+      "title": "Instagram conversation-chain construction"
+    },
+    {
+      "decision": "exploratory; no production ingestion change",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 3,
+      "held_artifact_directory_count": 15,
+      "id": "study-007",
+      "public_code_paths": [
+        "experiments/active/instagram-conversation-episodes/validators.py",
+        "experiments/active/instagram-conversation-episodes/decide_episode_experiment.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-007.md",
+      "title": "Instagram conversation episodes"
+    },
+    {
+      "decision": "structural_only; not promoted for chain selection",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 3,
+      "id": "study-008",
+      "public_code_paths": [
+        "experiments/archived/instagram-chain-selection-jina-v1/jina_candidate_selection_experiment.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-008.md",
+      "title": "Jina selection for Instagram chains"
+    },
+    {
+      "decision": "archive the human-label-gated direction; automatic labels remain hypotheses",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 1,
+      "id": "study-009",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-009.md",
+      "title": "Automatic conversation-role and label directions"
+    },
+    {
+      "decision": "diagnostic tooling only; no general semantic-quality claim",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 4,
+      "id": "study-010",
+      "public_code_paths": [
+        "scripts/interpretation_audit.py",
+        "writing_rag/verify/claims.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-010.md",
+      "title": "Interpretation and claim-boundary audits"
+    },
+    {
+      "decision": "not confirmed; no production or article-holdout promotion",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 1,
+      "id": "study-011",
+      "public_code_paths": [
+        "experiments/active/j1-qwen-jina-confirmation-v1/evaluate_confirmation.py",
+        "experiments/active/qwen-top50-reranker-v2/rerank_frozen_pools.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-011.md",
+      "title": "Qwen top-50 with Jina reranker confirmation"
+    },
+    {
+      "decision": "retain Jina only in explicitly bounded auxiliary roles",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 17,
+      "held_artifact_directory_count": 13,
+      "id": "study-012",
+      "public_code_paths": [
+        "experiments/archived/jina-model-characterization/compare_jina_mode_runs.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-012.md",
+      "title": "Jina model and task-mode characterization"
+    },
+    {
+      "decision": "remove Jina retrieval replacement; Qwen remains the corpus retriever",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 3,
+      "id": "study-013",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-013.md",
+      "title": "Jina retrieval replacement attempts"
+    },
+    {
+      "decision": "direction supported on the frozen pilot; auxiliary use only",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 6,
+      "id": "study-014",
+      "public_code_paths": [
+        "scripts/jina_text_matching_mlx.py",
+        "writing_rag/select/jina_text_matching_mlx.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-014.md",
+      "title": "Jina symmetric text matching"
+    },
+    {
+      "decision": "diagnostic; no vocabulary simplification rule promoted",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 2,
+      "id": "study-015",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-015.md",
+      "title": "Load-bearing language and semantic coherence"
+    },
+    {
+      "decision": "diagnostic artifacts; no canonical-path change",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 4,
+      "id": "study-016",
+      "public_code_paths": [
+        "writing_rag/plan/source_hydration.py",
+        "writing_rag/plan/narrative_reconstruction.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-016.md",
+      "title": "Evidence locality and backfill diagnostics"
+    },
+    {
+      "decision": "MDX ingestion is retained; global ranking did not demonstrate an article-output change",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 4,
+      "held_artifact_directory_count": 15,
+      "id": "study-017",
+      "public_code_paths": [
+        "scripts/build_markdown_content.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-017.md",
+      "title": "MDX content ingestion and retrieval ablations"
+    },
+    {
+      "decision": "experiment hook only; not a canonical production stage",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 3,
+      "id": "study-018",
+      "public_code_paths": [
+        "writing_rag/plan/narrative_reconstruction.py",
+        "writing_rag/plan/source_hydration.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-018.md",
+      "title": "Narrative-map smoke and packet experiments"
+    },
+    {
+      "decision": "research direction only; canonical generation remains separate",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 1,
+      "id": "study-019",
+      "public_code_paths": [
+        "writing_rag/plan/narrative_reconstruction.py",
+        "writing_rag/plan/source_hydration.py",
+        "writing_rag/verify/claims.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-019.md",
+      "title": "Narrative reconstruction and source hydration"
+    },
+    {
+      "decision": "retain the evidence-first fallback pattern; article generation remains unresolved",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 6,
+      "held_artifact_directory_count": 12,
+      "id": "study-020",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-020.md",
+      "title": "Near-black article scaffolds and writing trials"
+    },
+    {
+      "decision": "no public result asserted",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 3,
+      "held_artifact_directory_count": 1,
+      "id": "study-021",
+      "public_code_paths": [
+        "experiments/active/obsidian-kb-poc-v1/select_slice.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-021.md",
+      "title": "Local knowledge-base prototype"
+    },
+    {
+      "decision": "not promoted as a replacement for the canonical global retrieval path",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 10,
+      "id": "study-022",
+      "public_code_paths": [
+        "scripts/paragraph_generation.py",
+        "writing_rag/generate/paragraph_generation.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-022.md",
+      "title": "Paragraph-level retrieval and drafting"
+    },
+    {
+      "decision": "scaffold-guided generation remains a direction; no minimum scaffold promoted",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 2,
+      "id": "study-023",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-023.md",
+      "title": "Narrative-pattern and scaffold ablations"
+    },
+    {
+      "decision": "no public result asserted",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 1,
+      "id": "study-024",
+      "public_code_paths": [
+        "scripts/generate.py",
+        "scripts/retrieve.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-024.md",
+      "title": "Personal knowledge-base retrieval prototype"
+    },
+    {
+      "decision": "corrected 22-case pilot retained as exploratory characterization",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 16,
+      "id": "study-025",
+      "public_code_paths": [
+        "scripts/compare_qwen_characterization_runs.py",
+        "scripts/embed_chunks.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-025.md",
+      "title": "Qwen embedding characterization"
+    },
+    {
+      "decision": "Qwen remains retrieval; A0 remains default; Jina is an auxiliary experiment",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 1,
+      "id": "study-026",
+      "public_code_paths": [
+        "scripts/jina_text_selection.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-026.md",
+      "title": "Qwen retrieval with bounded Jina text selection"
+    },
+    {
+      "decision": "Q0 remains the measured baseline; no Q1 improvement claimed",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 1,
+      "id": "study-027",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-027.md",
+      "title": "Qwen query-encoding policy comparison"
+    },
+    {
+      "decision": "reranking is a bounded ranking hypothesis; confirmation was not met",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 3,
+      "id": "study-028",
+      "public_code_paths": [
+        "experiments/active/qwen-top50-reranker-v2/freeze_qwen_top50.py",
+        "experiments/active/qwen-top50-reranker-v2/rerank_frozen_pools.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-028.md",
+      "title": "Frozen Qwen top-50 reranking"
+    },
+    {
+      "decision": "diagnostic series; later frozen studies govern current conclusions",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 10,
+      "id": "study-029",
+      "public_code_paths": [
+        "scripts/evaluate_retrieval.py",
+        "scripts/diagnose_retrieval_coverage.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-029.md",
+      "title": "Retrieval-quality diagnostics"
+    },
+    {
+      "decision": "no scaffold minimum or Jina default promoted",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 2,
+      "id": "study-030",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-030.md",
+      "title": "Scaffold with Qwen and Jina selection"
+    },
+    {
+      "decision": "partial/interrupted; no promotion conclusion",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 1,
+      "id": "study-031",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-031.md",
+      "title": "MDX holdout scaffold ablation"
+    },
+    {
+      "decision": "not promoted; global Qwen retrieval remains the current path",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 3,
+      "id": "study-032",
+      "public_code_paths": [
+        "scripts/generate.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-032.md",
+      "title": "Whole-article versus per-slot retrieval"
+    },
+    {
+      "decision": "pilot_complete_no_promotion; production retrieval unchanged",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 17,
+      "id": "study-033",
+      "public_code_paths": [
+        "writing_rag/plan/composition_unit_loop.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-033.md",
+      "title": "Shape\u2013Beat composition architecture"
+    },
+    {
+      "decision": "not an independent experiment family",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 9,
+      "held_artifact_directory_count": 0,
+      "id": "study-034",
+      "public_code_paths": [
+        "scripts/run_pipeline.py",
+        "scripts/validate_outputs.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "support_group",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-034.md",
+      "title": "Shared pipeline and experiment-support scripts"
+    },
+    {
+      "decision": "private diagnostics retained; no trace payload published",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 0,
+      "held_artifact_directory_count": 4,
+      "id": "study-035",
+      "public_code_paths": [
+        "scripts/evidence_trace.py",
+        "writing_rag/verify/evidence_trace.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-035.md",
+      "title": "Evidence trace and provenance diagnostics"
+    },
+    {
+      "decision": "validated section fallback works in the recorded run; continuity pass is not accepted",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 1,
+      "held_artifact_directory_count": 6,
+      "id": "study-036",
+      "public_code_paths": [
+        "writing_rag/verify/claims.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-036.md",
+      "title": "Typed article distillation"
+    },
+    {
+      "decision": "screening was invalid; later fused retrieval remained not confirmed",
+      "disposition": "pending sanitization",
+      "excluded_legacy_python_file_count": 4,
+      "held_artifact_directory_count": 1,
+      "id": "study-037",
+      "public_code_paths": [
+        "experiments/active/uembed-instagram-retrieval-v1/instagram_screen.py",
+        "experiments/active/uembed-instagram-retrieval-v1/ranking.py"
+      ],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "blocked_pending_sanitization",
+      "summary": "studies/study-037.md",
+      "title": "UEmbed screening and reranking"
+    },
+    {
+      "decision": "4B path removed from the wordwise experiment; no retrieval claim",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 2,
+      "held_artifact_directory_count": 2,
+      "id": "study-038",
+      "public_code_paths": [],
+      "public_evidence_reference": "../architecture/experiment-ledger.md",
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-038.md",
+      "title": "Wordwise corpus embeddings"
+    },
+    {
+      "decision": "Qwen baseline retained; no production backend change from this family",
+      "disposition": "results-only",
+      "excluded_legacy_python_file_count": 3,
+      "held_artifact_directory_count": 11,
+      "id": "study-039",
+      "public_code_paths": [
+        "experiments/active/zembed-retrieval-validity-v1/README.md",
+        "experiments/active/zembed-retrieval-validity-v1/validate_artifacts.py"
+      ],
+      "public_evidence_reference": null,
+      "record_type": "research_line",
+      "reproduction": "results_only",
+      "summary": "studies/study-039.md",
+      "title": "Embedding retrieval validity and source-homogeneous checks"
+    }
+  ]
+}

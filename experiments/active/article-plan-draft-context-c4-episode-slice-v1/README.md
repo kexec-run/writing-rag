@@ -72,15 +72,30 @@ retrieval, or Jina.
 
 ## Artifacts
 
-- `manifest.json`: independently hashed C4 registration and frozen contracts;
-- `anchors.json`: selector-visible frozen C3 anchors;
-- `evaluation/pairs.json`: evaluation-only registered pairs;
-- `scripts/article_plan_draft_context_c4_episode_slice_artifacts.py`: extractor;
-- `scripts/article_plan_draft_context_c4_episode_slice_confirmation.py`: pure
-  selector/audit harness and guarded C4 runner.
-- `data/generated/article-plan-draft-context-c4-episode-slice-v1/run-report.json`:
-  full-run decision and generation results;
-- `data/generated/article-plan-draft-context-c4-episode-slice-v1/plan-compliance.json`:
-  phase and contract compliance record;
-- `data/generated/article-plan-draft-context-c4-episode-slice-v1/plan-deviance.md`:
-  caveats and interpretation of the completed run.
+The private study used a registration manifest, frozen anchors and evaluation
+pairs, two experiment scripts, and generated run/compliance/deviance reports.
+Those inputs, scripts, and outputs are intentionally omitted from this public
+snapshot; their historical names are listed below for provenance only and are
+not available reproduction instructions:
+
+- `manifest.json`, `anchors.json`, and `evaluation/pairs.json` (private study
+  inputs; not included here);
+- `scripts/article_plan_draft_context_c4_episode_slice_artifacts.py` and
+  `scripts/article_plan_draft_context_c4_episode_slice_confirmation.py`
+  (private scripts; not included here);
+- `data/generated/article-plan-draft-context-c4-episode-slice-v1/run-report.json`,
+  `plan-compliance.json`, and `plan-deviance.md` (private generated outputs;
+  not included here).
+
+## Public research record
+
+Disposition: `results-only`. Private outlines, source plans, assertions and per-target payloads are excluded. Do not infer a general win from an individual accepted or rejected draft.
+
+See the [sanitized study summary](../../../docs/experiments/studies/study-001.md) and [complete experiment catalog](../../../docs/experiments/README.md).
+
+## Public availability
+
+- Catalog disposition: `results-only` ([study-001](../../../docs/experiments/studies/study-001.md)).
+- Present in this folder: `README.md` only.
+- Omitted: private manifest inputs, anchors, evaluation pairs, runner scripts, generated reports, corpus, and model cache; the preceding artifact names are historical references, not available files.
+- Reproduction limit: the public page preserves the selector contract and decision context, not a runnable C4 study.

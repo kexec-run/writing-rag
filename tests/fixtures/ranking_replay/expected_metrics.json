@@ -1,0 +1,44 @@
+{
+  "schema_version": "ranking-replay-expected-metrics-v1",
+  "basis": "Hand-calculated from fixture_spec.json gold ranks; six synthetic queries, repeated condition payloads.",
+  "native": {
+    "recall_at_5": 0.333333,
+    "recall_at_10": 0.5,
+    "recall_at_50": 0.833333,
+    "mrr_at_50": 0.254365,
+    "ndcg_at_10": 0.294002,
+    "groups": {
+      "p90": {"query_count": 2, "recall_at_5": 0.5, "recall_at_10": 1.0, "recall_at_50": 1.0, "mrr_at_50": 0.571429, "ndcg_at_10": 0.666667},
+      "p95": {"query_count": 2, "recall_at_5": 0.0, "recall_at_10": 0.0, "recall_at_50": 1.0, "mrr_at_50": 0.066667, "ndcg_at_10": 0.0},
+      "p99": {"query_count": 2, "recall_at_5": 0.5, "recall_at_10": 0.5, "recall_at_50": 0.5, "mrr_at_50": 0.125, "ndcg_at_10": 0.215338}
+    }
+  },
+  "qwen_order": {
+    "recall_at_5": 0.333333,
+    "recall_at_10": 0.5,
+    "recall_at_50": 0.833333,
+    "mrr_at_50": 0.247096,
+    "ndcg_at_10": 0.28372,
+    "rescues_at_10": 1,
+    "damages_at_10": 1,
+    "groups": {
+      "p90": {"query_count": 2, "recall_at_5": 1.0, "recall_at_10": 1.0, "recall_at_50": 1.0, "mrr_at_50": 0.6, "ndcg_at_10": 0.693426},
+      "p95": {"query_count": 2, "recall_at_5": 0.0, "recall_at_10": 0.5, "recall_at_50": 1.0, "mrr_at_50": 0.095833, "ndcg_at_10": 0.157732},
+      "p99": {"query_count": 2, "recall_at_5": 0.0, "recall_at_10": 0.0, "recall_at_50": 0.5, "mrr_at_50": 0.045455, "ndcg_at_10": 0.0}
+    }
+  },
+  "jina_order": {
+    "recall_at_5": 0.5,
+    "recall_at_10": 0.666667,
+    "recall_at_50": 0.833333,
+    "mrr_at_50": 0.215,
+    "ndcg_at_10": 0.319636,
+    "rescues_at_10": 1,
+    "damages_at_10": 0,
+    "groups": {
+      "p90": {"query_count": 2, "recall_at_5": 0.5, "recall_at_10": 1.0, "recall_at_50": 1.0, "mrr_at_50": 0.333333, "ndcg_at_10": 0.493568},
+      "p95": {"query_count": 2, "recall_at_5": 0.5, "recall_at_10": 0.5, "recall_at_50": 1.0, "mrr_at_50": 0.186667, "ndcg_at_10": 0.25},
+      "p99": {"query_count": 2, "recall_at_5": 0.5, "recall_at_10": 0.5, "recall_at_50": 0.5, "mrr_at_50": 0.125, "ndcg_at_10": 0.215338}
+    }
+  }
+}

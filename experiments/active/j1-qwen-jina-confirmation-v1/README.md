@@ -63,3 +63,16 @@ The query-level ranking payloads, manifests, and architecture diagram are not
 included in this public snapshot. The aggregate metrics and the
 [frozen-pool protocol](../qwen-top50-reranker-v2/README.md) are retained here
 so the result can be understood without exposing private evaluation data.
+
+## Public research record
+
+Disposition: `results-only`. The reranker cannot recover candidates absent from Qwen's pool. Corpus cases and run artifacts are private; figures are transcribed from the sanitized decision ledger, not recomputed here.
+
+See the [sanitized study summary](../../../docs/experiments/studies/study-011.md) and [complete experiment catalog](../../../docs/experiments/README.md).
+
+## Public availability
+
+- Catalog disposition: `results-only` ([study-011](../../../docs/experiments/studies/study-011.md)).
+- Present in this folder: `README.md`, `evaluate_confirmation.py`, and `verify_repeatability.py`.
+- Omitted: the architecture, development-substrate and evaluation manifests; query-level candidate payloads; private corpus and labels; model cache; and full run traces.
+- Reproduction limit: retained scripts are historical support code, not a complete runnable confirmation bundle; reported metrics are transcribed from the sanitized decision record.

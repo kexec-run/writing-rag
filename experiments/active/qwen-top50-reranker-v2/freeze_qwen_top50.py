@@ -241,35 +241,55 @@ def validate_frozen(artifact: dict[str, Any]) -> None:
         raise ValueError("frozen scope cardinality is invalid")
     if artifact.get("invariants", {}).get("rerankers_may_only_change_order") is not True:
         raise ValueError("reranker order-only invariant is missing")
+    if set(artifact.get("conditions", {})) != set(CONDITIONS):
+        raise ValueError("frozen conditions are missing or unexpected")
+    query_sets: dict[str, set[str]] = {}
     for condition in CONDITIONS:
         condition_data = artifact.get("conditions", {}).get(condition)
         if not condition_data or condition_data.get("query_count") != query_count:
             raise ValueError(f"invalid condition: {condition}")
-        for row in condition_data.get("queries", []):
+        query_rows = condition_data.get("queries")
+        if not isinstance(query_rows, list) or len(query_rows) != query_count:
+            raise ValueError(f"query rows do not match declared count: {condition}")
+        query_ids: list[str] = []
+        for row in query_rows:
             query_text = row.get("query_text")
+            query_id = row.get("query_id")
+            if not isinstance(query_id, str) or not query_id or not isinstance(query_text, str):
+                raise ValueError(f"query identity or text is invalid: {condition}")
+            query_ids.append(query_id)
             if row.get("query_sha256") != _sha256_text(str(query_text)):
-                raise ValueError(f"query hash mismatch: {condition}/{row.get('query_id')}")
+                raise ValueError(f"query hash mismatch: {condition}/{query_id}")
             candidates = row.get("candidates", [])
             if len(candidates) != POOL_SIZE:
-                raise ValueError(f"candidate pool size mismatch: {condition}/{row.get('query_id')}")
+                raise ValueError(f"candidate pool size mismatch: {condition}/{query_id}")
             ids = [candidate.get("candidate_id") for candidate in candidates]
-            if len(set(ids)) != POOL_SIZE:
-                raise ValueError(f"duplicate candidate ID: {condition}/{row.get('query_id')}")
+            if any(not isinstance(value, str) or not value for value in ids) or len(set(ids)) != POOL_SIZE:
+                raise ValueError(f"duplicate or invalid candidate ID: {condition}/{query_id}")
             if [candidate.get("native_rank") for candidate in candidates] != list(range(1, POOL_SIZE + 1)):
-                raise ValueError(f"native order mismatch: {condition}/{row.get('query_id')}")
+                raise ValueError(f"native order mismatch: {condition}/{query_id}")
             for candidate in candidates:
-                text = str(candidate.get("candidate_text"))
+                text = candidate.get("candidate_text")
+                if not isinstance(text, str):
+                    raise TypeError(f"candidate text is invalid: {condition}/{query_id}")
                 if candidate.get("candidate_sha256") != _sha256_text(text):
                     raise ValueError(
-                        f"candidate hash mismatch: {condition}/{row.get('query_id')}"
+                        f"candidate hash mismatch: {condition}/{query_id}"
                     )
             gold_id = row.get("gold_candidate_id")
-            gold_rank = int(row.get("gold_native_rank"))
+            gold_rank = row.get("gold_native_rank")
+            if not isinstance(gold_id, str) or not gold_id or isinstance(gold_rank, bool) or not isinstance(gold_rank, int) or gold_rank < 1:
+                raise ValueError(f"gold identity or native rank is invalid: {condition}/{query_id}")
             gold_in_pool = gold_id in ids
             if gold_in_pool != (gold_rank <= POOL_SIZE):
-                raise ValueError(f"gold pool membership mismatch: {condition}/{row.get('query_id')}")
+                raise ValueError(f"gold pool membership mismatch: {condition}/{query_id}")
             if gold_in_pool and candidates[gold_rank - 1].get("candidate_id") != gold_id:
-                raise ValueError(f"gold rank mismatch: {condition}/{row.get('query_id')}")
+                raise ValueError(f"gold rank mismatch: {condition}/{query_id}")
+        if len(query_ids) != len(set(query_ids)):
+            raise ValueError(f"duplicate query ID: {condition}")
+        query_sets[condition] = set(query_ids)
+    if any(query_sets[condition] != query_sets[CONDITIONS[0]] for condition in CONDITIONS[1:]):
+        raise ValueError("query IDs differ across frozen conditions")
 
 
 def main() -> int:

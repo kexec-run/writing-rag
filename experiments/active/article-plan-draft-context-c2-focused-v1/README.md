@@ -48,3 +48,16 @@ time-disjoint confirmation set before production promotion.
 
 Jina, reranking, retrieval changes, graph redesign, and production-default
 changes are out of scope.
+
+## Public research record
+
+Disposition: `results-only`. Private outlines, source plans, assertions and per-target payloads are excluded. Do not infer a general win from an individual accepted or rejected draft.
+
+See the [sanitized study summary](../../../docs/experiments/studies/study-001.md) and [complete experiment catalog](../../../docs/experiments/README.md).
+
+## Public availability
+
+- Catalog disposition: `results-only` ([study-001](../../../docs/experiments/studies/study-001.md)).
+- Present in this folder: `README.md` only.
+- Omitted: private message targets, source plans, model cache, experiment runner, and generated comparison artifacts.
+- Reproduction limit: the public record describes a historical context-packet comparison; it cannot reproduce the corpus result.

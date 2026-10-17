@@ -6,6 +6,8 @@ import argparse
 import json
 from pathlib import Path
 
+from replay_frozen_rankings import load_validated_result
+
 CONDITIONS = ("baseline", "c1_full", "jina_selected")
 
 
@@ -13,10 +15,16 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--qwen", required=True)
     parser.add_argument("--jina", required=True)
+    parser.add_argument("--substrate")
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
-    qwen = json.loads(Path(args.qwen).read_text(encoding="utf-8"))
-    jina = json.loads(Path(args.jina).read_text(encoding="utf-8"))
+    substrate_path = Path(args.substrate) if args.substrate else None
+    qwen = load_validated_result(Path(args.qwen), substrate_path)
+    jina = load_validated_result(Path(args.jina), substrate_path)
+    qwen_mode = qwen.get("execution_mode", "model_execution")
+    jina_mode = jina.get("execution_mode", "model_execution")
+    if qwen_mode != jina_mode:
+        raise ValueError("cannot compare synthetic replay with model-execution results")
     if qwen["substrate_sha256"] != jina["substrate_sha256"]:
         raise ValueError("Qwen and Jina results do not use the same frozen substrate")
     rows = []
@@ -40,18 +48,32 @@ def main() -> int:
         "qwen_artifact": str(Path(args.qwen)),
         "jina_artifact": str(Path(args.jina)),
         "same_substrate_required": True,
+        "execution_mode": qwen_mode,
+        "model_executed": qwen_mode != "synthetic_replay",
         "substrate_sha256": qwen["substrate_sha256"],
+        "ranking_labels": {
+            "qwen": qwen.get("ranking_label", qwen.get("reranker", {}).get("name", "Qwen MLX")),
+            "jina": jina.get("ranking_label", jina.get("reranker", {}).get("name", "Jina MLX")),
+        },
         "conditions": rows,
     }
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    qwen_label = result["ranking_labels"]["qwen"]
+    jina_label = result["ranking_labels"]["jina"]
+    if qwen_mode == "synthetic_replay":
+        description = "Synthetic ranking replay; no model inference was executed."
+        qwen_label = f"{qwen_label} fixture"
+        jina_label = f"{jina_label} fixture"
+    else:
+        description = "Qwen remains the retriever. Rerankers only reorder the same frozen 50 candidates per query."
     lines = [
         "# Frozen top-50 reranker comparison",
         "",
-        "Qwen remains the retriever. Qwen MLX and Jina MLX only reorder the same frozen 50 candidates per query.",
+        description,
         "",
-        "| Condition | Native R@5 | Qwen R@5 | Jina R@5 | Native R@10 | Qwen R@10 | Jina R@10 | Native MRR | Qwen MRR | Jina MRR | Native nDCG@10 | Qwen nDCG@10 | Jina nDCG@10 |",
+        f"| Condition | Native R@5 | {qwen_label} R@5 | {jina_label} R@5 | Native R@10 | {qwen_label} R@10 | {jina_label} R@10 | Native MRR | {qwen_label} MRR | {jina_label} MRR | Native nDCG@10 | {qwen_label} nDCG@10 | {jina_label} nDCG@10 |",
         "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in rows:
@@ -64,7 +86,13 @@ def main() -> int:
             f"{native['mrr_at_50']:.6f} | {qwen_values['mrr_at_50']:.6f} | {jina_values['mrr_at_50']:.6f} | "
             f"{native['ndcg_at_10']:.6f} | {qwen_values['ndcg_at_10']:.6f} | {jina_values['ndcg_at_10']:.6f} |"
         )
-    lines.extend(
+    if qwen_mode == "synthetic_replay":
+        lines.extend([
+            "",
+            "Synthetic fixture results are contract checks only; they are not model measurements and cannot change a model or production decision.",
+        ])
+    else:
+        lines.extend(
         [
             "",
             "## Decision gates",
@@ -72,7 +100,7 @@ def main() -> int:
             "Promising requires Jina ΔR@10 ≥ +0.05, net rescue@10 ≥ +3, non-negative R@5, MRR, and nDCG@10, with no catastrophic fold or band regression.",
             "A result below those thresholds remains diagnostic and does not promote Jina or change the Qwen retrieval path.",
         ]
-    )
+        )
     output.with_suffix(".md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(json.dumps({"json": str(output), "report": str(output.with_suffix('.md'))}, indent=2))
     return 0

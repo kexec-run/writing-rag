@@ -27,6 +27,54 @@ from writing_rag.plan.obligation_set import (
 from writing_rag.plan.oflat_compiler import compile_oflat, validate_oflat_text
 from writing_rag.plan.satisfiability import audit_plan_pool_satisfiability
 
+EXPECTED_OBLIGATION_IDS = {
+    "synthetic-minimal": ["OBL-001", "OBL-002"],
+    "multi-beat": ["OBL-001", "OBL-002", "OBL-003", "OBL-004"],
+}
+
+
+def validate_public_obligation_contract(
+    plan: dict[str, Any], expected_ids: list[str] | None = None
+) -> list[str]:
+    """Validate plan obligation bindings and, when supplied, its fixed ID set."""
+    errors: list[str] = []
+    shape_ids = {
+        str(shape.get("id", ""))
+        for shape in plan.get("shapes", [])
+        if isinstance(shape, dict)
+    }
+    beats = {
+        str(beat.get("id", "")): str(beat.get("shape_id", ""))
+        for beat in plan.get("beats", [])
+        if isinstance(beat, dict)
+    }
+    obligations = plan.get("evidence_obligations", [])
+    if not isinstance(obligations, list) or not obligations:
+        return ["composition plan must contain evidence obligations"]
+    actual_ids: list[str] = []
+    for obligation in obligations:
+        if not isinstance(obligation, dict):
+            errors.append("evidence obligation must be an object")
+            continue
+        obligation_id = str(obligation.get("obligation_id", ""))
+        if obligation_id:
+            actual_ids.append(obligation_id)
+        binds = obligation.get("binds")
+        if not isinstance(binds, dict):
+            errors.append(f"obligation has invalid bindings: {obligation_id}")
+            continue
+        shape_id = str(binds.get("shape_id", ""))
+        beat_id = str(binds.get("beat_id", ""))
+        if shape_id not in shape_ids:
+            errors.append(f"obligation binds to missing shape: {obligation_id}")
+        if beat_id not in beats:
+            errors.append(f"obligation binds to missing beat: {obligation_id}")
+        elif beats[beat_id] != shape_id:
+            errors.append(f"obligation shape/beat binding mismatch: {obligation_id}")
+    if expected_ids is not None and actual_ids != expected_ids:
+        errors.append("obligation IDs differ from the fixed case contract")
+    return sorted(set(errors))
+
 
 def _load_fixture(fixture_root: Path, name: str, filename: str) -> dict[str, Any]:
     value = json.loads((fixture_root / name / filename).read_text(encoding="utf-8"))
@@ -61,17 +109,20 @@ def _check(name: str, mutation: str, action: Callable[[], bool]) -> dict[str, An
     }
 
 
-def run_negative_checks(fixture_root: Path) -> list[dict[str, Any]]:
+def run_negative_checks(
+    fixture_root: Path, fixture_name: str = "synthetic-minimal"
+) -> list[dict[str, Any]]:
     """Run every registered Axis 0 negative mutation and return its evidence."""
 
     def minimal() -> dict[str, Any]:
-        return _load_fixture(fixture_root, "synthetic-minimal", "composition-plan.json")
+        return _load_fixture(fixture_root, fixture_name, "composition-plan.json")
 
     def beat() -> dict[str, Any]:
-        return _load_fixture(fixture_root, "oracle-beat-heavy", "composition-plan.json")
+        # Build cycle mutations from the selected public synthetic case.
+        return minimal()
 
     def minimal_pool() -> dict[str, Any]:
-        return _load_fixture(fixture_root, "synthetic-minimal", "g0-pool.json")
+        return _load_fixture(fixture_root, fixture_name, "g0-pool.json")
 
     def unsupported_schema() -> bool:
         plan = _finalize(minimal())
@@ -99,8 +150,10 @@ def run_negative_checks(fixture_root: Path) -> list[dict[str, Any]]:
 
     def dependency_cycle() -> bool:
         plan = _finalize(beat())
-        plan["beats"][2]["depends_on"] = ["B02-03"]
-        plan["beats"][3]["depends_on"] = ["B02-02"]
+        first_id = str(plan["beats"][0]["id"])
+        second_id = str(plan["beats"][1]["id"])
+        plan["beats"][0]["depends_on"] = [second_id]
+        plan["beats"][1]["depends_on"] = [first_id]
         plan["plan_sha256"] = composition_plan_sha256(plan)
         return any(
             "dependency cycle" in item for item in validate_composition_plan(plan)
@@ -121,6 +174,32 @@ def run_negative_checks(fixture_root: Path) -> list[dict[str, Any]]:
         plan["plan_sha256"] = composition_plan_sha256(plan)
         return any(
             "missing witness id" in item for item in validate_composition_plan(plan)
+        )
+
+    def obligation_structure() -> bool:
+        original = _finalize(minimal())
+        expected_ids = EXPECTED_OBLIGATION_IDS.get(fixture_name)
+        if expected_ids is None:
+            return False
+
+        missing = copy.deepcopy(original)
+        missing["evidence_obligations"].pop()
+        missing["plan_sha256"] = composition_plan_sha256(missing)
+
+        duplicate = copy.deepcopy(original)
+        duplicate["evidence_obligations"].append(
+            copy.deepcopy(duplicate["evidence_obligations"][0])
+        )
+        duplicate["plan_sha256"] = composition_plan_sha256(duplicate)
+
+        invalid_binding = copy.deepcopy(original)
+        invalid_binding["evidence_obligations"][0]["binds"]["beat_id"] = "B99-99"
+        invalid_binding["plan_sha256"] = composition_plan_sha256(invalid_binding)
+
+        return (
+            bool(validate_public_obligation_contract(missing, expected_ids))
+            and bool(validate_composition_plan(duplicate))
+            and bool(validate_public_obligation_contract(invalid_binding, expected_ids))
         )
 
     def forbidden_oflat_instruction() -> bool:
@@ -199,7 +278,11 @@ def run_negative_checks(fixture_root: Path) -> list[dict[str, Any]]:
         ("invalid_beat", "replace a Beat ID with an invalid value", invalid_beat),
         ("dependency_cycle", "introduce a Beat dependency cycle", dependency_cycle),
         ("unknown_authority", "introduce a forbidden authority", unknown_authority),
-        ("missing_witness", "remove an obligation witness", missing_witness),
+        (
+            "obligation_structure",
+            "remove or duplicate obligations, corrupt a Shape/Beat binding, or remove a witness",
+            lambda: missing_witness() and obligation_structure(),
+        ),
         (
             "oflat_gate_instruction",
             "insert a state-loop instruction into O-flat",

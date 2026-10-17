@@ -46,10 +46,22 @@ retrieval quality or article quality. It refuses to run if `data/raw/` contains
 anything except the exact synthetic fixtures. Generated artifacts stay under
 ignored `data/`.
 
+Two additional model-free experiment demonstrations are available:
+
+- [Frozen ranking replay](experiments/active/qwen-top50-reranker-v2/README.md)
+  exercises ranking metrics on invented candidate pools; it does not run Qwen
+  or Jina and makes no model-quality claim.
+- [Shape–Beat validation](experiments/active/shape-beat-axis0-v1/README.md)
+  validates two synthetic composition cases and their negative mutations; it
+  does not reproduce the private pilot or establish article-generation quality.
+
 ## Run with local models
 
 Install the optional model/runtime dependencies and make the Qwen embedding
-model available in the Hugging Face cache:
+model available in the Hugging Face cache. This operational path also requires
+your own imported corpus and locally generated retrieval documents/vectors; it
+is not one of the clean-clone synthetic demonstrations above. Without those
+inputs and weights, the model pipeline is not expected to run:
 
 ```bash
 python -m pip install -r requirements-qwen.txt
@@ -77,11 +89,37 @@ Experiments are kept separate from the canonical Qwen retrieval path. Published
 summaries must distinguish implemented behavior from exploratory results and
 must not include corpus payloads or private evaluation traces. Reproducing
 corpus-based metrics requires the private source corpus; this public snapshot
-contains only synthetic fixtures. The validation performed for this release
-reported 154 passing tests, 33 private-data-dependent skips, and 181 existing
-Ruff findings. Those results are not a claim that all tests passed or that the
-repository is lint-clean. The skips require private data, and the synthetic
-demo does not provide semantic-model validation.
+contains only synthetic fixtures. The initial public seed's validation counts
+(154 passing tests and 181 Ruff findings) are historical. For the current
+release candidate, the default suite reported 177 passed, 33 private-data
+skips, and 6 subtests passed. The documentation validator passed 21 negative
+fixtures. Repository-wide Ruff reported 179 findings, with no new file/rule
+diagnostics relative to the reviewed initial commit; the changed D1/D2 Python
+files are clean. The D1 ranking replay and both D2 synthetic cases passed, and
+repeated D1 rankings and D2 outputs matched exactly. These checks do not make
+the repository lint-clean or validate semantic-model or article quality. A
+separate optional experiment test collection still has two import errors
+because excluded local Qwen characterization modules are unavailable;
+private-data skips and that optional collection blocker are not hidden by the
+passing default suite.
+
+The public [experiment catalog](docs/experiments/README.md) records 38 research
+lines, 25 named experiment directories, 96 excluded Python support or experiment
+files, and 222 held artifact directories. These are inventory counts, not
+independent runs or samples. Each study separates implementation disposition
+from scientific outcome and marks results transcribed from the private decision
+ledger.
+
+An optional experiment-test collection produced two errors because excluded
+local Qwen characterization modules are unavailable. Static inspection found
+11 imports from public experiment/test files that resolve only to excluded local
+modules. Some runners also require private corpora or generated artifacts. The
+catalog records known blockers; this release step did not restore those paths.
+
+The canonical retrieval path uses Qwen. Jina text matching remains auxiliary,
+and the Jina reranker result is unconfirmed. Ranking gains have not yet produced
+a repeatable accepted article across the tested scaffold comparisons. See the
+[current architecture](docs/architecture/single-path.md), [model roles](docs/architecture/qwen-jina-reranker-tree.md), and [article-generation problem brief](docs/architecture/article-generation-problem-brief.md).
 
 ## License
 

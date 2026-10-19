@@ -1,8 +1,9 @@
 # writing-rag
 
-A local writing-memory prototype that turns chat and transcript exports into
-searchable source material. It keeps conversational context separate from
-examples of your own writing and retains source references for review.
+A local RAG system for writing in your own style, using your chats, transcripts,
+and past writing as reference. It explores how to preserve your phrasing,
+reasoning, and the way you connect ideas, while you supply the article's intent
+and narrative flow.
 
 > **Work in progress.** Import, retrieval, article generation, and verification
 > are implemented. The research explores conversation structure, evidence

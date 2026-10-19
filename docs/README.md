@@ -7,6 +7,8 @@ Start with the system path, then the import guide and experiment record.
 | [Project overview](../README.md) | Implemented capabilities, local setup and validation limits |
 | [Importing chats](importing-chats.md) | Supported source shapes, speaker/time handling and privacy |
 | [Canonical pipeline](architecture/single-path.md) | Current ingestion, retrieval, generation and verification flow |
+| [Conversation context and style](architecture/conversation-context-and-style.md) | Executed context-summary and self-text experiments, causal-flow handling and limits |
+| [Generation contracts and diagnostics](architecture/generation-contracts-and-diagnostics.md) | Implemented authority, source hydration, scoped drafting, repair and reproducibility controls |
 | [Qwen and Jina roles](architecture/qwen-jina-reranker-tree.md) | Retrieval, text matching and frozen-pool reranking boundaries |
 | [Experiment decisions](architecture/experiment-ledger.md) | Key outcomes, failures, decisions and revisit conditions |
 | [Article-generation problem](architecture/article-generation-problem-brief.md) | Why retrieval success has not solved narrative and acceptance failures |

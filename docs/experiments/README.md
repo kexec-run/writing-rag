@@ -2,6 +2,30 @@
 
 This catalog preserves the research paths tested in the private project while keeping conversations, corpus payloads, source-span maps, vectors and raw traces local.
 
+Start with the [selected findings](../../README.md#selected-research-findings)
+and [ablation table](../../README.md#ablation-studies). The
+[retained experiment table](../../README.md#retained-experiments) links all 17
+public directories to their result summaries; this catalog covers the wider
+history, including studies whose code was omitted.
+
+## Browse by research area
+
+The groups below provide reading paths through all 38 research lines and the
+shared-support group. They do not change study IDs, recorded decisions, or
+the complete inventory below. Public summaries preserve reported results;
+private raw reports and cases are not included.
+
+| Area | Studies and public summaries |
+|---|---|
+| Conversation structure | [Chain construction](studies/study-006.md), [conversation episodes](studies/study-007.md), [Jina chain selection](studies/study-008.md), [automatic roles and labels](studies/study-009.md) |
+| Embedding models and runtimes | [Runtime / ANE](studies/study-002.md), [Jina task modes](studies/study-012.md), [Jina retrieval replacement](studies/study-013.md), [symmetric matching](studies/study-014.md), [Qwen characterization](studies/study-025.md), [query encoding](studies/study-027.md), [wordwise embeddings](studies/study-038.md), [retrieval validity](studies/study-039.md) |
+| Retrieval and evidence selection | [Graph retrieval](studies/study-004.md), [reranker confirmation](studies/study-011.md), [locality and backfill](studies/study-016.md), [MDX source ablations](studies/study-017.md), [Qwen/Jina selection](studies/study-026.md), [frozen-pool reranking](studies/study-028.md), [retrieval diagnostics](studies/study-029.md), [UEmbed](studies/study-037.md) |
+| Article generation and distillation | [Article plans and context](studies/study-001.md), [engine and retry ablations](studies/study-003.md), [holdout / near-black repeats](studies/study-005.md), [near-black writing trials](studies/study-020.md), [paragraph drafting](studies/study-022.md), [typed distillation](studies/study-036.md) |
+| Scaffolds, holdouts, and composition | [Narrative scaffold ablations](studies/study-023.md), [scaffold and selector ablations](studies/study-030.md), [MDX holdouts](studies/study-031.md), [whole-query / per-slot retrieval](studies/study-032.md), [Shape–Beat](studies/study-033.md) |
+| Narrative representation and verification | [Claim-boundary audits](studies/study-010.md), [load-bearing language](studies/study-015.md), [narrative packets](studies/study-018.md), [reconstruction and hydration](studies/study-019.md), [evidence traces](studies/study-035.md) |
+| Knowledge-base prototypes | [Local notes](studies/study-021.md), [personal knowledge base](studies/study-024.md) |
+| Shared support | [Pipeline and experiment support](studies/study-034.md) |
+
 ## How to read the inventory
 
 The catalog lists **25 named experiment directories**, **96 excluded Python support/experiment files**, and **222 held generated-artifact directories**, grouped into **38 research lines plus one shared-support group**. No historical corpus/model study is classified as runnable from this snapshot. Two isolated synthetic capabilities are separately verified: one replays frozen ranking metrics, and one checks Shape–Beat composition contracts. Neither executes models or reproduces a study result. The 222 are directory containers: they may hold reports, repeatability summaries, intermediate files, vectors, empty placeholders or multiple executions. They are not 222 runs or independent examples.
